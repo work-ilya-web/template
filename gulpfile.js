@@ -42,7 +42,6 @@ exports.styles = styles
 const stylesLibs = () => {
   return src([
       'node_modules/swiper/swiper-bundle.min.css',
-      'node_modules/video.js/dist/video-js.min.css'
     ])
     .pipe(concat('libs.css'))
     .pipe(dest('docs/css'))
@@ -54,13 +53,9 @@ exports.stylesLibs = stylesLibs
 // Scripts libs
 
 const scriptsLibs = () => {
-  return src([
-      'node_modules/focus-visible/dist/focus-visible.min.js',
-      'node_modules/scroll-lock/dist/scroll-lock.min.js',
+  return src([  
       'node_modules/swiper/swiper-bundle.min.js',
       'node_modules/gsap/dist/gsap.min.js',
-      'node_modules/gsap/dist/Draggable.min.js',
-      'node_modules/video.js/dist/video.min.js',
       'node_modules/jquery/dist/jquery.min.js'
     ])
     .pipe(concat('libs.js'))
